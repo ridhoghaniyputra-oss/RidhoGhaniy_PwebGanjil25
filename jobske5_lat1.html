@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="contact.php" method="POST">
+        <fieldset>
+        <legend><h1>Formulir Pendaftaran Siswa</h1></legend>
+
+        <table border="1" width="500" cellspacing="1">
+            <tr>
+                <td><label for="nlengkap">Nama Calon Siswa </label></td>
+                <td>:</td>
+                <td><input type="text" name="nama lengkap" placeholder="nama lengkap..."/></td>
+            </tr>
+
+            <tr>
+                <td><label>Tempat dan Tanggal Lahir</label></td>
+                <td>:</td>
+                <td><input type="text" name="tempat"/><input type="date" name="tanggal"/></td>
+            </tr>
+
+            <tr>
+                <td> <label>Agama</label></td>
+                <td>:</td>
+                <td><select name="agama">
+            <option value="X">Islam</option>
+            <option value="X">Kristen</option>
+            <option value="X">XII</option>
+         </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="alamat">Alamat :</label></td>
+                <td>:</td>
+                <td><textarea id="alamat" name="alamat" rows="6" cols="45"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="nim">No telp/hp</label></td>
+                <td>:</td>
+                <td><input type="number" name="telp"/></td>
+            </tr>
+
+            <tr>
+                <td><label>Jenis Kelamin</label></td>
+                <td>:</td>
+                <td><label><input type="radio" name="pilihan" value="laki" />Laki-Laki</label>
+             <label><input type="radio" name="pilihan" value="perem" />Perempuan</label></td>
+            </tr>
+
+            <tr>
+                <td><label>Hobi</label></td>
+                <td>:</td>
+                <td> <label><input type="checkbox" name="pilihan" value="tinfor" />Membaca</label>
+              <label><input type="checkbox" name="pilihan" value="sisin" />Menulis</label>
+              <label><input type="checkbox" name="pilihan" value="multi" />Olahraga</label></td>
+            </tr>
+
+            <tr>
+                <td>Pas Poto</td>
+                <td>:</td>
+                <td>
+                    <input type="file"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Username</label></td>
+                <td>:</td>
+                <td> <input type="text" name="username"/></td>
+            </tr>
+
+            <tr>
+                <td><label>Password</label></td>
+                <td>:</td>
+                <td><input type="password" name="password"/></td>
+            </tr>
+
+            <tr></tr>
+
+
+
+        </table>
+
+
+</body>
+</html>
