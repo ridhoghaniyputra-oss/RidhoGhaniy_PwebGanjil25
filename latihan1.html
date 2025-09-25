@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+<style>
+    
+</style>
+</head>
+<body>
+    <h4 align="center">FORM BIODATA SISWA</h4>
+<hr>
+
+ <form action="login.php" method="POST" >
+
+        
+        <label for="nim">NIM :</label>
+        <input type="text" name="nim" placeholder="nim..." />
+
+        <br>
+
+        <label for="nlengkap">Nama Lengkap :</label>
+        <input type="text" name="nama lengkap" placeholder="nama lengkap..."/>
+
+        <br>
+
+        <label>Kelas :</label>
+        <select name="kelas">
+            <option value="X">X</option>
+            <option value="X">XI</option>
+            <option value="X">XII</option>
+        </select>
+        
+        <br>
+
+        <label>Jurusan :</label>
+        <label><input type="radio" name="pilihan" value="tinfor" />Teknik Informatika</label>
+        <label><input type="radio" name="pilihan" value="sisin" />Sistem Informasi</label>
+        <label><input type="radio" name="pilihan" value="multi" />Multimedia</label>
+
+        <br>
+        
+        <label>Tempat dan Tanggal Lahir  :</label>
+        <input type="text" name="tempat"/>
+        <input type="date" name="tanggal"/>
+
+        <br>
+
+        <label>Jenis Kelamin :</label>
+        <label><input type="radio" name="pilihan" value="laki" />Laki-Laki</label>
+        <label><input type="radio" name="pilihan" value="perem" />Perempuan</label>
+
+        <br>
+
+        
+        <label for="alamat">Alamat :</label>
+        <input type="text" name="alamat"/>
+
+        <br>
+
+        <label>Email :</label>
+        <label><input type="email"/></label>
+        <select name="email">
+            <option value="gmail">Gmail.com</option>
+            <option value="yahoo">Yahoo.com</option>
+        </select>
+
+        <br>
+
+         <input type="submit" name="submit" value="Submit" />
+          <input type="reset" name="submit" value="Cancel" />    
+ </form>
+</body>
+</html>
