@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel - Form & Nota</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:12px;background:#fff}
+    .card{max-width:880px;margin:0 auto;border:1px solid #999;padding:10px}
+    .header{text-align:center;margin-bottom:8px}
+    .logo{display:inline-block;width:64px;height:64px;background:#eee;border:1px solid #ccc;vertical-align:middle;margin-right:8px}
+    .logo{display:inline-block;width:64px;height:64px;object-fit:cover;border:1px solid #ccc;vertical-align:middle;margin-right:8px}
+    .title{display:inline-block;font-weight:700}
+    .row{display:flex;gap:12px}
+    .panel{flex:1;border:1px solid #bbb;padding:8px;box-sizing:border-box}
+    table{width:100%;border-collapse:collapse}
+    td{padding:6px;vertical-align:middle}
+    input[type="text"], input[type="number"], select{width:100%;padding:4px;box-sizing:border-box}
+    .controls{text-align:center;margin-top:8px}
+    button{padding:6px 10px;margin:0 6px}
+    #nota{display:none;margin-top:10px}
+    #nota table, #nota td, #nota th{border:1px solid #000;border-collapse:collapse;padding:6px}
+    .label{width:110px;display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="card">
+   <div class="header">
+      <table>
+        <tr>
+          <th>
+            <img src="logoigasar.png" alt="Travel Logo" class="logo">
+          </th>
+          <th>
+            <span class="title">Travel Igasar Pindad Bandung</span>
+          </th>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="panel">
+        <strong>Data Penumpang</strong>
+        <table>
+          <tr><td class="label">Nama</td><td><input id="nama" type="text"></td></tr>
+          <tr>
+            <td class="label">Tujuan</td>
+            <td>
+              <select id="tujuan">
+                <option value="" data-price="0">-- Pilih Tujuan --</option>
+                <option value="Surabaya" data-price="540000">Surabaya</option>
+                <option value="Jakarta" data-price="200000">Jakarta</option>
+                <option value="Yogyakarta" data-price="300000">Yogyakarta</option>
+              </select>
+            </td>
+          </tr>
+          <tr><td class="label">Jumlah Tiket</td><td><input id="jumlah" type="number" min="1" value="1"></td></tr>
+          <tr>
+            <td class="label">Member</td>
+            <td>
+              <label><input type="radio" name="member" value="none" checked> Bukan Member</label>
+              <label><input type="radio" name="member" value="gold"> Gold</label>
+              <label><input type="radio" name="member" value="silver"> Silver</label>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="panel">
+        <strong>Data Pembayaran</strong>
+        <table>
+          <tr><td class="label">Harga Tiket</td><td><input id="harga" type="text" readonly></td></tr>
+          <tr><td class="label">Sub Total</td><td><input id="subtotal" type="text" readonly></td></tr>
+          <tr><td class="label">Diskon</td><td><input id="diskon" type="text" readonly></td></tr>
+          <tr><td class="label">Total Bayar</td><td><input id="total" type="text" readonly></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="hitung">Hitung</button>
+      <button id="bayar">Bayar</button>
+      <button id="ulang">Ulang</button>
+    </div>
+
+    <div id="nota">
+      <table>
+        <tr><th colspan="2" style="text-align:center">Bukti Pembayaran</th></tr>
+        <tr><td>Nama Penumpang</td><td id="nota-nama"></td></tr>
+        <tr><td>Tujuan</td><td id="nota-tujuan"></td></tr>
+        <tr><td>Jumlah Tiket</td><td id="nota-jumlah"></td></tr>
+        <tr><td>Member</td><td id="nota-member"></td></tr>
+        <tr><td>Harga Tiket</td><td id="nota-harga"></td></tr>
+        <tr><td>Sub Total</td><td id="nota-subtotal"></td></tr>
+        <tr><td>Diskon</td><td id="nota-diskon"></td></tr>
+        <tr><td>Total Bayar</td><td id="nota-total"></td></tr>
+        <tr><td>Dibayarkan</td><td id="nota-bayar"></td></tr>
+        <tr><td>Kembalian</td><td id="nota-kembali"></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ 
