@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Indeks Prestasi</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, serif;
+            background: #f0f0f0;
+            padding: 30px;
+            color: #000;
+        }
+
+        .wrapper {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+        .panel {
+            background: #fff;
+            border: 2px solid #999;
+            box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+        }
+
+        
+        .panel .top {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #999;
+            padding: 12px 16px;
+        }
+
+        .logo {
+            width: 90px;
+            flex: 0 0 90px;
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 84px;
+            height: auto;
+            display: inline-block;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 2px;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .subtitle {
+            display:block;
+            font-size:14px;
+            margin-top:6px;
+            font-weight:normal;
+        }
+
+      
+        .form-area {
+            padding: 10px 14px 18px 14px;
+        }
+
+        table.form {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        table.form td {
+            padding: 6px;
+            vertical-align: middle;
+        }
+
+        .label {
+            width: 120px;
+            padding-left: 6px;
+            color: #000;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 6px;
+            border: 1px solid #999;
+            border-radius: 2px;
+            font-size: 13px;
+            background: #fff;
+        }
+
+        input[readonly] {
+            background:#eee;
+        }
+
+        .small {
+            width: 120px;
+        }
+
+        .btn-row {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 6px 14px;
+            margin: 0 6px;
+            border: 1px solid #666;
+            background: #efefef;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+
+        .result-table {
+            margin-top: 10px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .result-table td {
+            padding: 6px;
+            border-top: 1px solid #ddd;
+        }
+
+        
+        .panel-inner {
+            border-left: 1px solid #d0d0d0;
+            border-right: 1px solid #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="panel">
+            <div class="top">
+                <div class="logo">
+                    
+                    <img src="logoigasar.png" alt="logo">
+                </div>
+                <div class="title">
+                    Menghitung Indeks Prestasi
+                    <span class="subtitle">Peserta didik SMK Igasar Pindad Bandung</span>
+                </div>
+                <div style="width:90px"></div>
+            </div>
+
+            <div class="panel-inner">
+                <div class="form-area">
+                    <form id="formNilai" onsubmit="return false;">
+                        <table class="form">
+                            <tr>
+                                <td class="label">Quiz (10%)</td>
+                                <td><input id="quiz" type="number" min="0" max="100" step="0.01" class="small" required></td>
+
+                                <td class="label">UTS (30%)</td>
+                                <td><input id="uts" type="number" min="0" max="100" step="0.01" class="small" required></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Tugas (20%)</td>
+                                <td><input id="tugas" type="number" min="0" max="100" step="0.01" class="small" required></td>
+
+                                <td class="label">UAS (40%)</td>
+                                <td><input id="uas" type="number" min="0" max="100" step="0.01" class="small" required></td>
+                            </tr>
+                        </table>
+
+                        <div class="btn-row">
+                            <button id="hitung" type="button">Hitung</button>
+                            <button id="ulang" type="button">Ulang</button>
+                        </div>
+
+                        <table class="result-table">
+                            <tr>
+                                <td style="width:140px">Nilai Akhir</td>
+                                <td><input id="nilaiAkhir" type="text" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Indeks Prestasi</td>
+                                <td><input id="indeks" type="text" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>Keterangan</td>
+                                <td><input id="keterangan" type="text" readonly></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptkedua.js"></script>
+</body>
+</html>
